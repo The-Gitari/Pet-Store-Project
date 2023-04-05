@@ -26,7 +26,7 @@ document.getElementById("search-button").addEventListener("click", () => {
   if (breed !== "") {
     fetch(`${apiUrl}/breeds/search?q=${breed}`, {
       headers: {
-        "x-api-key": apiKey,
+        "live_yteZqRBNj4idAySvdpEyUembQtxUaLc0cY4dcLSkJeYLLVNXmtQ17Pm3Fj1UXzx1": apiKey,
       },
     })
       .then((response) => response.json())
@@ -35,7 +35,7 @@ document.getElementById("search-button").addEventListener("click", () => {
         data.forEach((breedData) => {
           fetch(`${apiUrl}/images/search?breed_id=${breedData.id}`, {
             headers: {
-              "x-api-key": apiKey,
+              "live_yteZqRBNj4idAySvdpEyUembQtxUaLc0cY4dcLSkJeYLLVNXmtQ17Pm3Fj1UXzx1": apiKey,
             },
           })
             .then((response) => response.json())
@@ -63,7 +63,7 @@ document.getElementById("upload-form").addEventListener("submit", (event) => {
     fetch(`${apiUrl}/images/upload`, {
       method: "POST",
       headers: {
-        "x-api-key": apiKey,
+        "live_yteZqRBNj4idAySvdpEyUembQtxUaLc0cY4dcLSkJeYLLVNXmtQ17Pm3Fj1UXzx1": apiKey,
       },
       body: formData,
     })
