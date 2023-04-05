@@ -1,5 +1,5 @@
 const apiUrl = "https://api.thedogapi.com/v1";
-const apiKey = "live_yteZqRBNj4idAySvdpEyUembQtxUaLc0cY4dcLSkJeYLLVNXmtQ17Pm3Fj1UXzx1"; // Replace with your own API key
+const apiKey = "live_yteZqRBNj4idAySvdpEyUembQtxUaLc0cY4dcLSkJeYLLVNXmtQ17Pm3Fj1UXzx1";
 
 // Function to display dog information on the page
 function displayDogInfo(dog) {
