@@ -1,0 +1,144 @@
+/*I want a theme of aqua blue and yellow*/
+/* Primary color: Aqua blue (#00bfff) */
+/* Secondary color: Yellow (#ffef99) */
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color: #00bfff;
+  }
+  
+  a {
+    color: #00bfff;
+    text-decoration: none;
+  }
+  
+  button {
+    cursor: pointer;
+    background-color: #00bfff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #0080ff;
+  }
+  
+  input, select, textarea {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    transition: border-color 0.2s ease;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #00bfff;
+  }
+  
+  /* Header */
+  header {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Search section */
+  #search-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #search-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #search-input {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 10px;
+  }
+  
+  #search-button {
+    margin-left: 10px;
+  }
+  
+  /* Upload section */
+  #upload-section {
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  #upload-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form input[type="text"], form select {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 10px;
+  }
+  
+  form textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  /* Dogs section */
+  #dogs-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #dogs-section div {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 300px;
+  }
+  
