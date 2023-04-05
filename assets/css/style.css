@@ -73,19 +73,9 @@
   
   /* Search section */
   #search-section {
-    
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  #search-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  #search-input {
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
     max-width: 500px;
     margin-bottom: 10px;
   }
@@ -143,3 +133,7 @@
     width: 300px;
   }
   
+  section {
+    margin-left: auto ;
+    margin-right: auto;
+  }
