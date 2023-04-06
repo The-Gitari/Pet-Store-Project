@@ -56,20 +56,21 @@
   
   /* Header */
   header {
-    background-color: #fff;
+    background-color: #1a1515;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  header h1 {
+   h1 {
     font-size: 32px;
     margin-bottom: 10px;
+    
   }
   
-  header p {
+  /* header p {
     font-size: 16px;
     margin-bottom: 20px;
-  }
+  } */
   
   /* Search section */
   #search-section {
@@ -90,6 +91,10 @@
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
   }
   
   #upload-section h2 {
@@ -133,7 +138,4 @@
     width: 300px;
   }
   
-  section {
-    margin-left: auto ;
-    margin-right: auto;
-  }
+  
