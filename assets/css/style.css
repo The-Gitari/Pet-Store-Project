@@ -3,11 +3,11 @@
 /* Secondary color: Yellow (#ffef99) */
 
 /* Global styles */
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+  } */
   
   body {
     font-family: Arial, sans-serif;
@@ -41,7 +41,7 @@
     background-color: #0080ff;
   }
   
-  input, select, textarea {
+  input, select, textarea{
     font-size: 16px;
     padding: 10px;
     border-radius: 5px;
@@ -55,16 +55,18 @@
   }
   
   /* Header */
-  header {
+  /* header {
     background-color: #1a1515;
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+  } */
   
    h1 {
     font-size: 32px;
     margin-bottom: 10px;
-    
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
   }
   
   /* header p {
@@ -79,6 +81,9 @@
     align-items: center;
     max-width: 500px;
     margin-bottom: 10px;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: self-start; */
   }
   
   #search-button {
@@ -86,7 +91,7 @@
   }
   
   /* Upload section */
-  #upload-section {
+  #upload-form {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -120,9 +125,21 @@
     height: 100px;
     margin-bottom: 10px;
   }
+
+  form input[type="image"] {
+    margin-bottom: 10px;
+
+  }
+
+  form input[type="email"], form select {
+    margin-bottom: 10px;
+    max-width: 500px;
+    
+
+  }
   
   /* Dogs section */
-  #dogs-section {
+  /* #dogs-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -136,6 +153,18 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     width: 300px;
-  }
+  } */
   
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+
+  p{
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    text-align: center;
+   
+  }
   

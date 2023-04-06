@@ -3,15 +3,16 @@ const apiKey = "live_yteZqRBNj4idAySvdpEyUembQtxUaLc0cY4dcLSkJeYLLVNXmtQ17Pm3Fj1
 
 // Function to display dog information on the page
 function displayDogInfo(dog) {
+    console.log(dog)
   const dogDiv = document.createElement("div");
   const dogImage = document.createElement("img");
-  dogImage.src = dog.url;
+  dogImage.src = dog.dogImage.url;
   dogImage.alt = "Dog image";
   dogDiv.appendChild(dogImage);
   document.getElementById("dogs").appendChild(dogDiv);
 
   const breedParagraph = document.createElement("p");
-  breedParagraph.innerText = `Breed: ${dog.breeds[0].name}`;
+  breedParagraph.innerText = `Breed: ${dog.name}`;
   dogDiv.appendChild(breedParagraph);
 
   const lifeSpanParagraph = document.createElement("p");
@@ -33,21 +34,40 @@ document.getElementById("search-button").addEventListener("click", () => {
       },
     })
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
+      .then(async (data) => {
+       
         document.getElementById("dogs").innerHTML = "";
-        data.forEach((breedData) => {
-          fetch(`${apiUrl}/images/search?breed_id=${breedData.id}`, {
-            headers: {
-              "live_yteZqRBNj4idAySvdpEyUembQtxUaLc0cY4dcLSkJeYLLVNXmtQ17Pm3Fj1UXzx1": apiKey,
-            },
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              data.forEach((dog) => displayDogInfo(dog));
-            })
-            .catch((error) => console.error(error));
-        });
+        const dogData = data[0];
+
+        try {
+            const fetchDogImage = await fetch(`${apiUrl}/images/search?breed_id=${dogData.id}`, {
+                headers: {
+                  "live_yteZqRBNj4idAySvdpEyUembQtxUaLc0cY4dcLSkJeYLLVNXmtQ17Pm3Fj1UXzx1": apiKey,
+                },
+              })
+    
+            const response= await fetchDogImage.json();
+    
+            const dogImage = response[0];
+    
+            displayDogInfo({...dogData, dogImage})
+        } catch (error) {
+            console.log(error)
+        }
+
+
+        // data.forEach((breedData) => {
+        //   fetch(`${apiUrl}/images/search?breed_id=${breedData.id}`, {
+        //     headers: {
+        //       "live_yteZqRBNj4idAySvdpEyUembQtxUaLc0cY4dcLSkJeYLLVNXmtQ17Pm3Fj1UXzx1": apiKey,
+        //     },
+        //   })
+        //     .then((response) => response.json())
+        //     .then((data) => {
+        //       data.forEach((dog) => displayDogInfo({...dog, ...data[0]}));
+        //     })
+        //     .catch((error) => console.error(error));
+        // });
       })
       .catch((error) => console.error(error));
   }
